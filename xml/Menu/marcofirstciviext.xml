@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/marcofirstciviext/page/marcopage</path>
+    <page_callback>CRM_Marcofirstciviext_Page_MarcoPage</page_callback>
+    <title>MarcoPage</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/ext/marcofirstciviext/form/firstform</path>
+    <page_callback>CRM_Marcofirstciviext_Form_MarcoFirstForm</page_callback>
+    <title>MarcoFirstForm</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</menu>
