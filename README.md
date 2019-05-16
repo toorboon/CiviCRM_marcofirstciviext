@@ -1,8 +1,6 @@
 # marcofirstciviext
 
-![Screenshot](/images/screenshot.png)
-
-(*FIXME: In one or two paragraphs, describe what the extension does and why one would download it. *)
+This is my first approach to realise own CiviCRM extensions. It just adds a nonsense page and a form. The form uses some api stuff to set email addresses for existing contacts you can choose from a drop down.
 
 The extension is licensed under [AGPL-3.0](LICENSE.txt).
 
@@ -37,8 +35,9 @@ cv en marcofirstciviext
 
 ## Usage
 
-(* FIXME: Where would a new user navigate to get started? What changes would they see? *)
+To see the form use this link: civicrm/ext/marcofirstciviext/form/firstform
+To see the page use this link: civicrm/marcofirstciviext/page/marcopage
 
 ## Known Issues
 
-(* FIXME *)
+
