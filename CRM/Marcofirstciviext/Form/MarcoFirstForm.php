@@ -32,15 +32,32 @@ class CRM_Marcofirstciviext_Form_MarcoFirstForm extends CRM_Core_Form {
     ));
 
 
-    /*if (isset($fields['login_email'])) {
-      if (!filter_var($fields['login_email'], FILTER_VALIDATE_EMAIL)) {
-        $errors['login_email'] = E::ts('Ongeldig emailadres');
-      }
-    }*/
+    /**/
 
      // export form elements
     $this->assign('elementNames', $this->getRenderableElementNames());
     parent::buildQuickForm();
+  }
+
+  /**
+   * Function to add validation condition rules (overrides parent function)
+   *
+   * @access public
+   */
+  public function addRules() {
+    $this->addFormRule(array('CRM_Marcofirstciviext_Form_MarcoFirstForm', 'validateEmails'));
+    
+  }
+
+  public function validateEmails($fields){
+    if (isset($fields['new_email'])) {
+      if (!filter_var($fields['new_email'], FILTER_VALIDATE_EMAIL)) {
+        $errors['new_email'] = E::ts('Scheiß Email Adresse');
+        return $errors;
+      }
+      return TRUE;
+    }
+
   }
 
   public function postProcess() {
